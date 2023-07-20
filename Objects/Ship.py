@@ -16,6 +16,6 @@ class Ship(RoomObject):
         elif key[pygame.K_s]:
             self.y_speed = 10
         elif key[pygame.K_d]:
-            self.x_speed = -10
-        elif key[pygame.K_a]:
             self.x_speed = 10
+        elif key[pygame.K_a]:
+            self.x_speed = -10
