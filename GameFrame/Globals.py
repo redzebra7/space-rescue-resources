@@ -1,7 +1,7 @@
 class Globals:
 
     running = True
-    FRAMES_PER_SECOND = 200
+    FRAMES_PER_SECOND = 1
 
     SCREEN_WIDTH = 1280
     SCREEN_HEIGHT = 800
