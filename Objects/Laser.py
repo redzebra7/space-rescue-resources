@@ -10,9 +10,15 @@ class Laser(RoomObject):
 
         self.set_direction(0, 20)
 
+        self.register_collision_object("Asteroid")
+
     def step(self):
         self.outside_of_room()
 
     def outside_of_room(self):
         if self.x > Globals.SCREEN_WIDTH:
             self.room.delete_object(self)
+    
+    def handle_collision(self, other, other_type):
+        if other_type == "Asteroid":
+            self.room.delete_object(other)
