@@ -1,5 +1,6 @@
 from GameFrame import RoomObject, Globals
 from Objects.Asteroid import Asteroid
+from Objects.Astronaut import Astronaut
 import random
 
 class Zork(RoomObject):
@@ -33,7 +34,7 @@ class Zork(RoomObject):
         self.set_timer(asteroid_spawn_time, self.spawn_asteroid)
 
     def spawn_astronaut(self):
-        new_astronaut = Astronaut(self.room, self.x, self.y, + self.height/2)
+        new_astronaut = Astronaut(self.room, self.x, self.y + self.height / 2)
         self.room.add_room_object(new_astronaut)
 
         astronaut_spawn_time = random.randint(30, 200)
