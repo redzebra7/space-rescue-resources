@@ -43,3 +43,4 @@ class Astronaut(RoomObject):
         """
         if self.x + self.width < 0:
             self.room.delete_object(self)
+            self.room.score.update_score(50)
