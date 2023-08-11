@@ -11,7 +11,6 @@ class Laser(RoomObject):
         self.set_direction(0, 20)
 
         self.register_collision_object("Asteroid")
-        self.register_collision_object("Astronaut")
 
     def step(self):
         self.outside_of_room()
@@ -22,6 +21,4 @@ class Laser(RoomObject):
     
     def handle_collision(self, other, other_type):
         if other_type == "Asteroid":
-            self.room.delete_object(other)
-        elif other_type == "Astronaut":
             self.room.delete_object(other)
