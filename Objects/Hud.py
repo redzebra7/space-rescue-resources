@@ -5,7 +5,7 @@ class Score(TextObject):
         TextObject.__init__(self, room, x, y, text)
 
         self.size = 60
-        self.font = 'Arial Black'
+        self.font = 'Coronet'
         self.colour = (255,255,255)
         self.bold = False
         self.update_text()
@@ -20,6 +20,8 @@ class Lives(RoomObject):
         RoomObject.__init__(self, room, x, y)
 
         self.lives_icon = []
+
+        Global_LIVES = 3
 
         for index in range(6):
             self.lives_icon.append(self.load_image(f"Lives_frames/Lives_{index}.png"))
