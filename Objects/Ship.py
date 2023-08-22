@@ -15,9 +15,9 @@ class Ship(RoomObject):
 
     def key_pressed(self, key):
         if key[pygame.K_w]:
-            self.y_speed = -10
+            self.y_speed = -30
         elif key[pygame.K_s]:
-            self.y_speed = 10
+            self.y_speed = 30
         if key[pygame.K_l]:
             self.shoot_laser()
     

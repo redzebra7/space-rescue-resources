@@ -23,7 +23,7 @@ class Laser(RoomObject):
     def handle_collision(self, other, other_type):
         if other_type == "Asteroid":
             self.room.delete_object(other)
-            self.room.score.update_score(5)
+            self.room.score.update_score(1000)
         elif other_type == "Astronaut":
             self.room.delete_object(other)
             self.room.score.update_score(-10)
