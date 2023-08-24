@@ -21,10 +21,10 @@ class Asteroid(RoomObject):
     def keep_in_room(self):
         if self.y < 0:
             self.y = 0
-            self.y_speed *= -1
+            self.y_speed *= -5
         elif self.y > Globals.SCREEN_HEIGHT - self.height:
             self.y = Globals.SCREEN_HEIGHT - self.height
-            self.y_speed *= -1
+            self.y_speed *= -5
     
     def outside_of_room(self):
         if self.x + self.width < 0:
